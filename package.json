@@ -2,7 +2,7 @@
   "name": "tic-tac-toe-game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sebagruia.github.io/React---TicTacToe-Game/",
+  "homepage": "https://sebagruia.github.io/TicTacToe---Game",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.12.0",
