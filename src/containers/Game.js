@@ -110,11 +110,12 @@ class Game extends Component {
 
         return (
             <Fragment>
+                
+                <div className="game">
                 <div class="title">
                     <h1 class="game-title">TicTacToe</h1>
                     <i class="fas fa-retweet" role="button" onClick={this.refresh}></i>
                 </div>
-                <div className="game">
                     <div className="game-board">
                         <Board
                             squares={current.squares}
