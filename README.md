@@ -1,4 +1,17 @@
+
+# TicTacToe - here you go :)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+- [Project Link On GitHub Pages](https://sebagruia.github.io/TicTacToe---Game/)
+
+
+## Description
+This is the clasical game Tic Tac Toe - ENJOY!
+
+## Short Explanation
+ - The game contains a history of all the moves the players are making. Clicking one move button from the history list will display the corresponding configuration of the game. 
+ - The game can be restarted by clicking the REFRESH button near the project Title. 
 
 ## Available Scripts
 
