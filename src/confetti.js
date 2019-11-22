@@ -15,7 +15,7 @@ var confetti = {
 	isRunning: null		//call and returns true or false depending on whether the animation is running
 };
 
- (function() {
+(function () {
 	confetti.start = startConfetti;
 	confetti.stop = stopConfetti;
 	confetti.toggle = toggleConfetti;
@@ -89,7 +89,7 @@ var confetti = {
 	function startConfetti(timeout, min, max) {
 		var width = window.innerWidth;
 		var height = window.innerHeight;
-		window.requestAnimationFrame = (function() {
+		window.requestAnimationFrame = (function () {
 			return window.requestAnimationFrame ||
 				window.webkitRequestAnimationFrame ||
 				window.mozRequestAnimationFrame ||
@@ -107,7 +107,7 @@ var confetti = {
 			document.body.prepend(canvas);
 			canvas.width = width;
 			canvas.height = height;
-			window.addEventListener("resize", function() {
+			window.addEventListener("resize", function () {
 				canvas.width = window.innerWidth;
 				canvas.height = window.innerHeight;
 			}, true);
@@ -157,7 +157,7 @@ var confetti = {
 		else
 			startConfetti();
 	}
-	
+
 	function isConfettiRunning() {
 		return streamingConfetti;
 	}
@@ -214,7 +214,7 @@ var confetti = {
 	module.exports = {
 		startConfetti: startConfetti,
 		stopConfetti: stopConfetti
-	  }
+	}
 }
 )();
 

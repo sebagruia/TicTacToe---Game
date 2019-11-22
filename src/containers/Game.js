@@ -13,7 +13,8 @@ class Game extends Component {
                 }
             ],
             stepNumber:0,
-            xIsNext: true
+            xIsNext: true,
+            checkWinner:false
         }
     }
 
@@ -50,7 +51,9 @@ class Game extends Component {
             }
         ],
         stepNumber:0,
-        xIsNext: true});
+        xIsNext: true,
+        checkWinner:false
+    });
         confetti.stopConfetti();
 
     }
@@ -108,18 +111,21 @@ class Game extends Component {
             status = `Next Player: ${this.state.xIsNext ? 'X' : 'O'}`;
         }
 
+        
+
         return (
             <Fragment>
                 
                 <div className="game">
-                <div class="title">
-                    <h1 class="game-title">TicTacToe</h1>
-                    <i class="fas fa-retweet" role="button" onClick={this.refresh}></i>
+                <div className="title">
+                    <h1 className="game-title">TicTacToe</h1>
+                    <i className="fas fa-retweet" role="button" onClick={this.refresh}></i>
                 </div>
                     <div className="game-board">
                         <Board
                             squares={current.squares}
-                            onClick={(i) => this.handleClick(i)} />
+                            onClick={(i) => this.handleClick(i)}
+                            checkWinner={this.state.checkWinner} />
                     </div>
                     <div className="game-info">
                         <div className="winner-name">{status}</div>
