@@ -9,7 +9,9 @@ class Board extends Component {
         let squareArray =[];
         for(let j=el; j<el+3;j++){
             let square = (<Square
+                    id ={j}
                     key ={j}
+                    squares={this.props.squares}
                     value={this.props.squares[j]}
                     onClick={() => this.props.onClick(j)} />);
                 squareArray.push(square);

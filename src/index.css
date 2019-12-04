@@ -2,7 +2,9 @@ body {
   font: 16px 'Odibee Sans', "Century Gothic", Futura, cursive, sans-serif;
   margin: 20px;
 }
-
+.marked{
+  color:orange;
+}
 ol,
 ul {
   padding-left: 30px;
@@ -51,7 +53,7 @@ ul {
   display:inline;
   margin-left: 20px;
   cursor:pointer;
-  font-size:1.2em;
+  font-size: 1.5em;
 }
 
 .title .fas:hover{
@@ -89,3 +91,8 @@ ul {
 .jumpTo-button {
   border-color: #fff;
 }
+
+.history-li{
+  margin-top:5px;
+}
+
