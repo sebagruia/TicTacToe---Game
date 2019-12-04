@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/TicTacToe---Game/static/css/main.71677eb4.chunk.css",
-    "main.js": "/TicTacToe---Game/static/js/main.0d7e0969.chunk.js",
-    "main.js.map": "/TicTacToe---Game/static/js/main.0d7e0969.chunk.js.map",
+    "main.css": "/TicTacToe---Game/static/css/main.f3185943.chunk.css",
+    "main.js": "/TicTacToe---Game/static/js/main.44c6b21c.chunk.js",
+    "main.js.map": "/TicTacToe---Game/static/js/main.44c6b21c.chunk.js.map",
     "runtime-main.js": "/TicTacToe---Game/static/js/runtime-main.dca8a78b.js",
     "runtime-main.js.map": "/TicTacToe---Game/static/js/runtime-main.dca8a78b.js.map",
-    "static/js/2.c3356a4a.chunk.js": "/TicTacToe---Game/static/js/2.c3356a4a.chunk.js",
-    "static/js/2.c3356a4a.chunk.js.map": "/TicTacToe---Game/static/js/2.c3356a4a.chunk.js.map",
+    "static/js/2.4e029a3e.chunk.js": "/TicTacToe---Game/static/js/2.4e029a3e.chunk.js",
+    "static/js/2.4e029a3e.chunk.js.map": "/TicTacToe---Game/static/js/2.4e029a3e.chunk.js.map",
     "index.html": "/TicTacToe---Game/index.html",
-    "precache-manifest.44d5958495a39e98a630e31fa1cb009d.js": "/TicTacToe---Game/precache-manifest.44d5958495a39e98a630e31fa1cb009d.js",
+    "precache-manifest.9832ed2467b8d659998994b71a53e12b.js": "/TicTacToe---Game/precache-manifest.9832ed2467b8d659998994b71a53e12b.js",
     "service-worker.js": "/TicTacToe---Game/service-worker.js",
-    "static/css/main.71677eb4.chunk.css.map": "/TicTacToe---Game/static/css/main.71677eb4.chunk.css.map"
+    "static/css/main.f3185943.chunk.css.map": "/TicTacToe---Game/static/css/main.f3185943.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.dca8a78b.js",
-    "static/js/2.c3356a4a.chunk.js",
-    "static/css/main.71677eb4.chunk.css",
-    "static/js/main.0d7e0969.chunk.js"
+    "static/js/2.4e029a3e.chunk.js",
+    "static/css/main.f3185943.chunk.css",
+    "static/js/main.44c6b21c.chunk.js"
   ]
 }
