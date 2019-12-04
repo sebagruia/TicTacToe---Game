@@ -1,4 +1,4 @@
-import React, {Component,Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import '../containers/Game.css';
 import Board from '../components/Board/Board';
 import confetti from '../confetti';
@@ -12,9 +12,9 @@ class Game extends Component {
                     squares: Array(9).fill(null)
                 }
             ],
-            stepNumber:0,
+            stepNumber: 0,
             xIsNext: true,
-            checkWinner:false,
+            checkWinner: false,
             // winningCombination:[]
         }
     }
@@ -26,10 +26,10 @@ class Game extends Component {
         // const squares = current.squares.slice(); This another solution to copy an array
         const squares = [...current.squares];
         if (this.calculateWinner(squares)) {
-            return ;
+            return;
         }
 
-        if(squares[i]){
+        if (squares[i]) {
             return
 
         }
@@ -38,37 +38,37 @@ class Game extends Component {
             // history: history.concat([{  //the same output is achieved  also with CONCAT
             //     squares: squares // }]),
             history: [...history, { squares }],
-           
-            stepNumber:history.length,
+
+            stepNumber: history.length,
             xIsNext: !this.state.xIsNext
         });
     }
 
-    jumpTo = (step)=>{
+    jumpTo = (step) => {
         this.setState({
-            stepNumber:step,
-            xIsNext:(step%2)===0
+            stepNumber: step,
+            xIsNext: (step % 2) === 0
         });
     }
 
     // This function restarts the game 
-    refresh = ()=>{
-        this.setState({  
+    refresh = () => {
+        this.setState({
             history: [
-            {
-                squares: Array(9).fill(null)
-            }
-        ],
-        stepNumber:0,
-        xIsNext: true,
-        checkWinner:false
-    });
+                {
+                    squares: Array(9).fill(null)
+                }
+            ],
+            stepNumber: 0,
+            xIsNext: true,
+            checkWinner: false
+        });
         confetti.stopConfetti();
 
     }
-    
 
-// This function displays the Winner 
+
+    // This function displays the Winner 
     calculateWinner = (squares) => {
         const lines = [
             [0, 1, 2],
@@ -96,7 +96,7 @@ class Game extends Component {
         const current = history[this.state.stepNumber];
         const winner = this.calculateWinner(current.squares);
 
-
+        // This function displays all the moves the players are making
         const moves = history.map((step, move) => {
             const desc = move ?
                 `Go to move # ${move}` :
@@ -106,12 +106,11 @@ class Game extends Component {
                 <li key={move} class="history-li">
                     <button className=" jumpTo-button btn btn-outline-dark" onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
-
-
             );
 
         });
 
+        // This code displays the name of the winner "O or X" else a dialog indicating which player has to move
         let status;
         if (winner) {
             status = `Winner ${winner}`;
@@ -121,21 +120,21 @@ class Game extends Component {
             status = `Next Player: ${this.state.xIsNext ? 'X' : 'O'}`;
         }
 
-        
+
 
         return (
             <Fragment>
-                
+
                 <div className="game">
-                <div className="title">
-                    <h1 className="game-title">TicTacToe</h1>
-                    <i className="fas fa-retweet" role="button" onClick={this.refresh}></i>
-                </div>
+                    <div className="title">
+                        <h1 className="game-title">TicTacToe</h1>
+                        <i className="fas fa-retweet" role="button" onClick={this.refresh}></i>
+                    </div>
                     <div className="game-board">
                         <Board
                             squares={current.squares}
                             onClick={(i) => this.handleClick(i)}
-                            />
+                        />
                     </div>
                     <div className="game-info">
                         <div className="winner-name">{status}</div>
@@ -143,7 +142,7 @@ class Game extends Component {
                     </div>
                 </div>
             </Fragment>
-            
+
         );
     }
 }
