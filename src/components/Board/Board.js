@@ -5,16 +5,16 @@ import Square from '../Square/Square';
 
 class Board extends Component {
 
-     generatingSquares = (el)=>{
-        let squareArray =[];
-        for(let j=el; j<el+3;j++){
+    generatingSquares = (el) => {
+        let squareArray = [];
+        for (let j = el; j < el + 3; j++) {
             let square = (<Square
-                    id ={j}
-                    key ={j}
-                    squares={this.props.squares}
-                    value={this.props.squares[j]}
-                    onClick={() => this.props.onClick(j)} />);
-                squareArray.push(square);
+                id={j}
+                key={j}
+                squares={this.props.squares}
+                value={this.props.squares[j]}
+                onClick={() => this.props.onClick(j)} />);
+            squareArray.push(square);
         }
         return squareArray;
     }
@@ -22,12 +22,12 @@ class Board extends Component {
 
     render() {
 
-          const generatingRows = [0,3,6].map((el, i)=>{
-                return <div key = {i} className="board-row">
-                        {this.generatingSquares(el)}
-                    </div>
+        const generatingRows = [0, 3, 6].map((el, i) => {
+            return <div key={i} className="board-row">
+                {this.generatingSquares(el)}
+            </div>
         })
-    
+
 
         return (
             <Fragment>

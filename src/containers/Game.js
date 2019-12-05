@@ -15,7 +15,6 @@ class Game extends Component {
             stepNumber: 0,
             xIsNext: true,
             checkWinner: false,
-            // winningCombination:[]
         }
     }
 
@@ -33,6 +32,9 @@ class Game extends Component {
             return
 
         }
+
+      
+      
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             // history: history.concat([{  //the same output is achieved  also with CONCAT
@@ -42,6 +44,10 @@ class Game extends Component {
             stepNumber: history.length,
             xIsNext: !this.state.xIsNext
         });
+
+        console.log(squares);
+        console.log(squares.includes(null));
+     
     }
 
     jumpTo = (step) => {
@@ -95,6 +101,7 @@ class Game extends Component {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = this.calculateWinner(current.squares);
+        const squares = [...current.squares];
 
         // This function displays all the moves the players are making
         const moves = history.map((step, move) => {
@@ -103,11 +110,10 @@ class Game extends Component {
                 `Go to game Start`
 
             return (
-                <li key={move} class="history-li">
+                <li key={move} className="history-li">
                     <button className=" jumpTo-button btn btn-outline-dark" onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
-
         });
 
         // This code displays the name of the winner "O or X" else a dialog indicating which player has to move
@@ -115,6 +121,9 @@ class Game extends Component {
         if (winner) {
             status = `Winner ${winner}`;
             confetti.startConfetti();
+        }
+        else if(!squares.includes(null)){
+            status = "It's a Draw";
         }
         else {
             status = `Next Player: ${this.state.xIsNext ? 'X' : 'O'}`;
